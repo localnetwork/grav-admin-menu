@@ -18,7 +18,7 @@ This will install the Admin Menu plugin into your `/user/plugins`-directory with
 
 ### Manual Installation
 
-To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `admin-menu`. You can find these files on [GitHub](https://github.com/https-github-com-localnetwork-/grav-plugin-admin-menu) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
+To install the plugin manually, download the zip-version of this repository and unzip it under `/your/site/grav/user/plugins`. Then rename the folder to `admin-menu`. You can find these files on [GitHub](https-github-com/localnetwork/grav-plugin-admin-menu) or via [GetGrav.org](http://getgrav.org/downloads/plugins#extras).
 
 You should now have all the plugin files under
 
