@@ -1,13 +1,38 @@
 {% set user = grav.user %} 
+{% set client_side_validation = form.client_side_validation is not null ? form.client_side_validation : config.plugins.form.client_side_validation|default(true) %}
+{% set inline_errors = form.inline_errors is not null ? form.inline_errors : config.plugins.form.inline_errors(false) %}
 
 {% if user.access.site.login == 'true' %}
 <div class="admin-menu d-flex flex-wrap justify-content-between">
-<a href="{{ uri.base }}"><i class="fa fa-home"></i></a>
+<a href="{{ uri.base }}" class="am-link-home">
+    <i class="fa fa-home"></i> 
+</a>
 
-    <div class="nav-right">
-    {{ user.username }}
-    <a class="user-link-logout" href="{{ uri.addNonce(base_url_relative ~ uri.path ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce')|e }}">{{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}</a>
+
+
+    <div class="nav-right"> 
+     
+     
+    {% if config.plugins.login.route_profile %}
+        <a class="am-link-profile" href="{{ config.plugins.login.route_profile }}"> 
+        
+            <i class="fa fa-user"></i>
+            {{ user.username }} 
+        </a>
+    {% else %}
+        <a class="am-link-profile" href="#">
+            <i class="fa fa-user"></i>
+            {{ user.username }} 
+        </a>
+    {% endif %}
+     
+     <a class="am-link-logout" href="{{ uri.addNonce(base_url_relative ~ config.plugins.login.route ~ '/task' ~ config.system.param_sep ~ 'login.logout', 'logout-form', 'logout-nonce')|e }}">
+         <i class="fa fa-sign-out"></i> {{ 'PLUGIN_LOGIN.BTN_LOGOUT'|t }}
+     </a>
+    
+    
     </div>
 </div> 
+
 
 {% endif %} 
