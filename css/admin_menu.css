@@ -1,0 +1,24 @@
+.admin-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #314D5B;
+  z-index: 9999;
+  font-size: 16px;
+  transition: all ease .3s; }
+  .admin-menu.admin-scrolled {
+    font-size: 15px;
+    transition: all ease .3s; }
+  .admin-menu a {
+    color: #fff; }
+  .admin-menu .am-link-home {
+    padding: 15px;
+    background-color: #50b1a0; }
+  .admin-menu .nav-right {
+    display: flex;
+    flex-wrap: wrap; }
+    .admin-menu .nav-right a {
+      padding: 15px; }
+
+/*# sourceMappingURL=admin_menu.css.map */

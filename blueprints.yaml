@@ -1,0 +1,27 @@
+name: Admin Menu
+version: 0.1.0
+description: Admin menu for grav cms, this plugin requires jquery.
+icon: navicon
+author:
+  name: Diome Nike Potot
+  email: diomenike@gmail.com
+homepage: https://github.com/localnetwork/grav-plugin-admin-menu
+# demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/localnetwork/grav-plugin-admin-menu/issues
+docs: https://github.com/localnetwork/grav-plugin-admin-menu/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
